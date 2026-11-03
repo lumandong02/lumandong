@@ -1,0 +1,32 @@
+# Four VS Realty Database Project
+
+MySQL 8.0+ starter database schema for the proposed **Web-Based Real Estate Lot Inventory and Installment Payment Management System with Agent Portal**.
+
+## Included tables
+- `roles`, `users`
+- `projects`, `lots`
+- `clients`, `client_documents`
+- `appointments`, `reservations`
+- `payment_plans`, `payments`
+- `project_expenses`
+- `agent_commissions`, `agent_incentives`
+- `audit_logs`
+
+## Import using phpMyAdmin
+1. Open phpMyAdmin.
+2. Select **Import**.
+3. Choose `four_vs_realty_db.sql`.
+4. Click **Go**. The database and tables will be created.
+
+## Import using MySQL terminal
+```bash
+mysql -u root -p < four_vs_realty_db.sql
+```
+
+## Notes
+- This is a starter schema based on the group's concept paper, not a complete production application.
+- The concept paper says installment, commission, and rice-incentive rules must be confirmed with the company. Those rules are not assumed or hard-coded here.
+- It records cash, bank transfer, and check payments; it does not process online payments.
+- Only role names and project names are inserted as sample data. No real client data is included.
+- Do not upload real client IDs, TIN documents, signatures, receipts, or other personal information to a public GitHub repository.
+- The application must hash passwords and enforce role-based access on the server.
