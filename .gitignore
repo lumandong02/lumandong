@@ -1,0 +1,5 @@
+*.env
+.env
+uploads/
+private_documents/
+*.bak
